@@ -23,7 +23,6 @@ export default {
     setup() {
         const cantidad = ref(0);
         const usuarios = ref([]);
-
         const cargarImagenes = async () => {
             try {
                 const respuesta = await fetch(`https://randomuser.me/api/?results=${cantidad.value}`);
@@ -33,8 +32,6 @@ export default {
                 console.error(error);
             }
         };
-
-
         return { cantidad, cargarImagenes, usuarios };
     },
 };
